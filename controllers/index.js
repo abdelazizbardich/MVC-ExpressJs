@@ -1,0 +1,1 @@
+exports.HomeController = require('./HomeController')
