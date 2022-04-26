@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css');
 *{
     margin: 0;
     padding: 0;
@@ -40,8 +41,10 @@ span.b{
     display: flex;
     align-items: center;
     transition: .3s;
+    justify-content: center;
 }
 .btn:hover{
+    color: #ffffff !important;
     transform: translateY(-5px);
     box-shadow: #00004a76 0px 8px 16px;
 }
@@ -53,4 +56,42 @@ span.b{
     font-size: 3rem;
     font-weight: 100;
     color: #00004a;
+}
+.delete{
+    background-color: red;
+    border-color: red;
+    display: inline-block;
+    text-align: center;
+    padding: 3px 6px;
+    text-transform: uppercase;
+}
+.edit{
+    background-color: #0026ff;
+    border-color: #0026ff;
+    display: inline-block;
+    text-align: center;
+    padding: 3px 6px;
+    text-transform: uppercase;
+}
+.box{
+    text-align: left;
+    max-width: 500px;
+    width: 70vh;
+}
+table{
+    border: 1px solid;
+    padding: 16px;
+    border-radius: 8px;
+    background: #cbf2f7;
+}
+table th {
+    /* border-bottom: 1px solid #aee6ed; */
+    padding: 8px 16px;
+}
+table,td{
+    border: 1px solid #aee6ed;
+    padding: 8px 16px;
+}
+td form {
+    display: inline-block;
 }

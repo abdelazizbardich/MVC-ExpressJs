@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>👋 Simple Crud</h1><br><br>
+    <a href="/users/add" class="btn">Add user</a><br><br>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <!-- <th>Password</th> -->
+            <th></th>
+        </thead>
+        <tbody>
+            <% users.forEach((user,index)=>{ %>
+                <tr>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <!-- <td>********</td> -->
+                    <td>
+                        <a href="/users/update/<%= user.id %>" class="btn edit">Edit</a>
+                        <form action="/users/delete" method="post">
+                            <input type="hidden" name="id" value="<%= user.id %>">
+                            <button class="btn delete" href="">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <script src="/js/main.js"></script>
+</body>
+</html>

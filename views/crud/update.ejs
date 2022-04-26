@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>👋 Simple Crud</h1><br><br>
+    <p>Update user</p>
+    <div class="box">
+        <form action="/users/update" method="post">
+            <input required type="hidden" name="id" value="<%= user.id %>">
+            <div class="form-group mb-3">
+                <label for="">Name:</label>
+                <input required type="text" name="name" value="<%= user.name %>" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Email:</label>
+                <input required type="text" name="email" value="<%= user.email %>" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Password:</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <button type="submit" class="btn btn-primary w-100 text-center">Save</button>
+            </div>
+        </form>
+    </div>
+    <!-- <script src="/js/main.js"></script> -->
+</body>
+</html>

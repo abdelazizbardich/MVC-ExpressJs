@@ -7,5 +7,5 @@ server.use(express.static('public')) // static files
 server.use(Router) // express router
 
 server.listen(8080,()=>{
-    console.log("server is running on: http://localhost:8080");
+    console.log("Server is running on: http://localhost:8080");
 })
